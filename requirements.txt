@@ -1,0 +1,16 @@
+torch>=2.2
+torchvision
+timm>=0.9.12
+opencv-python
+numpy
+pandas
+tqdm
+pyyaml
+albumentations>=1.3.1
+pyrender
+trimesh[easy]
+PyOpenGL
+scikit-image
+matplotlib
+python-dotenv
+

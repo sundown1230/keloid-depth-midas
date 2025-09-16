@@ -1,0 +1,37 @@
+# MiDaS微調整設定 - ローカルGPU環境
+model:
+  name: "midas_v21_small_256"
+  pretrained: true
+  freeze_backbone: false
+
+data:
+  base_dir: "${DATA_BASE_DIR}"
+  train_split: 0.8
+  val_split: 0.2
+  image_size: [256, 256]
+  batch_size: 8
+  num_workers: 4
+
+training:
+  epochs: 100
+  learning_rate: 1e-4
+  weight_decay: 1e-4
+  scheduler: "cosine"
+  warmup_epochs: 10
+  gradient_clip_val: 1.0
+
+loss:
+  type: "l1"
+  depth_weight: 1.0
+  smoothness_weight: 0.1
+
+output:
+  checkpoint_dir: "outputs/checkpoints"
+  log_dir: "outputs/logs"
+  sample_dir: "outputs/samples"
+  save_every: 10
+  log_every: 100
+
+device: "cuda"
+mixed_precision: true
+

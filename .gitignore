@@ -1,0 +1,30 @@
+# Python / venv
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+*.egg-info/
+
+# 画像・データは管理しない（別プロジェクト参照）
+data/
+02_data_processed/
+*.jpg
+*.jpeg
+*.png
+*.tif
+*.bmp
+*.npy
+
+# 実行生成物
+outputs/
+!outputs/checkpoints/.gitkeep
+!outputs/logs/.gitkeep
+!outputs/samples/.gitkeep
+
+# OS/IDE
+.DS_Store
+.idea/
+.vscode/
+.ipynb_checkpoints/
+
